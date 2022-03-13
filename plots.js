@@ -16,9 +16,9 @@ var layout = {
 
 Plotly.newPlot("plotBarArea", [trace], layout);
 
-// Nonalcoholic bar chart example
+// Nonalcoholic pie chart example
 var trace = {
-  x: [
+  labels: [
     "nonalcoholic beer",
     "nonalcoholic wine",
     "nonalcoholic martini",
@@ -28,16 +28,14 @@ var trace = {
     "nonalcoholic mai tai",
     "nonalcoholic gin & tonic",
   ],
-  y: [22.7, 17.1, 9.9, 8.7, 7.2, 6.1, 6.0, 4.6],
-  type: "bar",
+  values: [22.7, 17.1, 9.9, 8.7, 7.2, 6.1, 6.0, 4.6],
+  type: "pie",
 };
 
 var data = [trace];
 
 var layout = {
-  title: "'Bar' Chart",
-  xaxis: { title: "Drinks" },
-  yaxis: { title: "% of Drinks Ordered" },
+  title: "'Pie' Chart",
 };
 
 Plotly.newPlot("plotNonalcoholic", data, layout);
